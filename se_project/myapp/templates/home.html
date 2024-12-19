@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitTrack</title>
+    <title>หน้าแรก</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,35 +12,30 @@
             padding: 0;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #007bff;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 1rem 0;
         }
-        button {
-            margin: 20px;
-            padding: 15px 25px;
-            font-size: 18px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        main {
+            text-align: center;
+            margin-top: 50px;
         }
-        button:hover {
-            background-color: #45a049;
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>FitTrack</h1>
-        <p>เริ่มต้นการดูแลสุขภาพกับเรา</p>
+        <h1>ยินดีต้อนรับสู่ FitTrack</h1>
     </header>
-    <div style="text-align: center;">
-        <button onclick="window.location.href='/login'">เข้าสู่ระบบ</button>
-        <button onclick="window.location.href='/signup'">สมัครสมาชิก</button>
-        <button onclick="window.location.href='/menu'">เริ่มต้นใช้งาน</button>
-    </div>
+    <main>
+        <p>เริ่มต้นใช้งานด้วยการเข้าสู่ระบบหรือดูเมนู</p>
+        <a href="{% url 'login' %}">เข้าสู่ระบบ</a> |
+        <a href="{% url 'menu' %}">เมนู</a>
+    </main>
 </body>
 </html>
